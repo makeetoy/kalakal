@@ -4,10 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login_controller extends CI_Controller {
     public function index(){
       $this->load->view('template/header');
-  		$this->load->view('user_account/login_view');
+  		$this->load->view('accounts/login_view');
   		$this->load->view('template/footer');
     }
-    
+
     public function loginvalidation(){
       if($this->input->post('login_customer')=="Login as Customer"){
         $this->load->model('login_model');
