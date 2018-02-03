@@ -1,16 +1,19 @@
     <title>Kalakal | A B2B Wholesale E-Commerce Platform</title>
+    <!-- Plugin CSS -->
     <link href="<?php echo base_url('assets/css/style.css'); ?>" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
   </head>
   <body>
     <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="<?php echo base_url()?>" class="brand-logo">Kalakal.ph</a>
+      <a id="logo-container" href="<?php echo base_url()?>" class="brand-logo ">Kalakal.ph</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="<?php echo base_url()?>login">Login</a></li>
         <li><a href="<?php echo base_url()?>register">Register</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
-        <li><a class="orange waves-effect waves-light btn" href="#">Visit Store</a></li>
+        <li><a class="nav-link js-scroll-trigger" href="#features">Features</a></li>
+        <li><a class="nav-link js-scroll-trigger" href="#newsletter">Newsletter</a></li>
+        <li><a class="orange waves-effect waves-light btn" href="<?php echo base_url()?>store">Visit Store</a></li>
       </ul>
 
       <!-- Navbar converts to side menu when mobile mode -->

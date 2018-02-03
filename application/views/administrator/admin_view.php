@@ -12,7 +12,7 @@
   <div class="container" style="padding: 50px 100px 100px 100px;">
     <div class="center col s12 z-depth-4 card-panel">
       <div class="row">
-        <form class="form" action="index.html" method="post">
+        <form class="form" method="post" action="<?php echo base_url();?>Administrator_controller/login">
           <h3 class="header s12 light">Web Adminstrator Login</h3>
 
           <div class="row margin">
@@ -30,12 +30,8 @@
               <label for="password">Password</label>
             </div>
           </div>
-
-          <div class="row">
-            <div class=" input-field col s10">
-              <a href="#" class=" right btn waves-effect waves-light col s10">Login</a>
-            </div>
-          </div>
+          <input type="submit" class="btn waves-effect waves-light" name="login" value="Login">
+          
         </form>
       </div>
     </div>

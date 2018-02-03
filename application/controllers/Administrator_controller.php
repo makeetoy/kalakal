@@ -8,5 +8,11 @@ class Administrator_controller extends CI_Controller {
 		$this->load->view('administrator/admin_view');
 		$this->load->view('template/footer');
 	}
+
+	public function login(){
+		$this->load->view('template/header');
+		$this->load->view('administrator/adminDash_view');
+		$this->load->view('template/footer');
+	}
 }
 ?>

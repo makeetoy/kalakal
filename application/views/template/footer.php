@@ -1,8 +1,8 @@
-  <footer class="page-footer orange darken-3">
+  <footer class="page-footer grey darken-3">
     <div class="container ">
       <div class="row">
         <div class="col l6 s12 ">
-          <h5 class="white-text">Kalakal.Ph</h5>
+          <img style = "height: 50px; width: 250px;"src="<?php echo base_url('assets/img/kalakal-logo2.png')?>" alt="Error">
           <p class="grey-text text-lighten-4">Kalakal is a B2B wholesale
             e-commerce platform for entrepreneurs looking for goods at the best price.</p>
         </div>
@@ -26,8 +26,23 @@
     </footer>
 
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/materialize.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/init.js'); ?>"></script>
+
+    <!-- Sweet Alert -->
+   <script src="<?php echo base_url('assets/js/success.js'); ?>"> </script>
+   <script src="<?php echo base_url('assets/js/sweetalert2.min.js'); ?>"> </script>
+   <!-- Bootstrap core JavaScript -->
+   <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
+   <script src="<?php echo base_url('assets/js/bootstrap.bundle.min.js'); ?>"></script>
+
+   <!-- Plugin JavaScript -->
+   <script src="<?php echo base_url('assets/js/jquery.easing.min.js'); ?>"></script>
+   <script src="<?php echo base_url('assets/js/scrollreveal.min.js'); ?>"></script>
+   <script src="<?php echo base_url('assets/js/jquery.magnific-popup.min.js'); ?>"></script>
+
+   <!-- Custom scripts for this template -->
+   <script src="<?php echo base_url('assets/js/creative.min.js'); ?>"></script>
   </body>
 </html>

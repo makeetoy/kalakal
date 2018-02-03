@@ -55,3 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['admin'] = 'Administrator_controller';
 $route['login'] = 'Login_controller';
 $route['register'] = 'Register_controller';
+$route['vendor'] = 'Vendor_controller';
+$route['manufacturer'] = 'Manufacturer_controller' ;
+$route['customer'] = 'Customer_controller';
+$route['store'] = 'Store_controller';

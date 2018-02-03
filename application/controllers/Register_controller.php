@@ -7,73 +7,48 @@ class Register_controller extends CI_Controller {
     $this->load->view('accounts/register_view');
     $this->load->view('template/footer');
   }
-  public function registervalidation(){
-    if($this->input->post('create_customer')=="Create as Customer"){
-    $password1 = $this->input->post("password_1");
-    $password2 = $this->input->post("password_2");
-		if($password1 == $password2){
+
+  public function registerValidation(){
+    if($this->input->post('create_customer')=="Register as Customer"){
       $data = array(
           "custName" => $this->input->post("name"),
           "custAddress" => $this->input->post("address"),
           "custEmail" => $this->input->post("email"),
           "custContact" => $this->input->post("contact"),
           "custUsername" => $this->input->post("username"),
-          "custPassword" => $this->input->post("password_1"),
-
+          "custPassword" => $this->input->post("password")
       );
       $this->load->model('register_model');
       $this->register_model->registercustomer($data);
-      echo "Customer!";
+      echo "Customer Success!";
     }
-    else{
-      $this->session->set_flashdata('error','Passwords does not match');
-      $this->index();
-    }
-    }
-    else if($this->input->post('create_vendor')=="Create as Vendor"){
-      $password1 = $this->input->post("password_1");
-      $password2 = $this->input->post("password_2");
-  		if($password1 == $password2){
-        $data = array(
+
+    else if($this->input->post('create_vendor')=="Register as Vendor"){
+      $data = array(
             "vendName" => $this->input->post("name"),
             "vendAddress" => $this->input->post("address"),
             "vendEmail" => $this->input->post("email"),
             "vendContact" => $this->input->post("contact"),
             "vendUsername" => $this->input->post("username"),
-            "vendPassword" => $this->input->post("password_1"),
-
+            "vendPassword" => $this->input->post("password")
         );
         $this->load->model('register_model');
         $this->register_model->registervendor($data);
-        echo "Vendor!";
-      }
-      else{
-        $this->session->set_flashdata('error','Passwords does not match');
-        $this->index();
-      }
+        echo "Vendor Success!";
     }
-    else if($this->input->post('create_Manufacturer')=="Create as Manufacturer"){
-      $password1 = $this->input->post("password_1");
-      $password2 = $this->input->post("password_2");
-  		if($password1 == $password2){
+
+    else if($this->input->post('create_Manufacturer')=="Register as Manufacturer"){
         $data = array(
             "manuName" => $this->input->post("name"),
             "manuAddress" => $this->input->post("address"),
             "manuEmail" => $this->input->post("email"),
             "manuContact" => $this->input->post("contact"),
             "manuUsername" => $this->input->post("username"),
-            "manuPassword" => $this->input->post("password_1"),
-
+            "manuPassword" => $this->input->post("password")
         );
         $this->load->model('register_model');
         $this->register_model->registermanufacturer($data);
-        echo "Manufacturer";
-      }
-      else{
-        $this->session->set_flashdata('error','Passwords does not match');
-        $this->index();
-      }
-
+        echo "Manufacturer Success";
     }
   }
 }
