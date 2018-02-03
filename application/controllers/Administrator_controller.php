@@ -1,6 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+// TODO:
+// 1. Login Module
+// 2. Dashboard Module
+// 3. Logout Module
+// 4. Manipulate Models
+
 class Administrator_controller extends CI_Controller {
 
 	public function index(){

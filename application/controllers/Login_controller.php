@@ -1,5 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+// TODO:
+// 1. ACCESS accounts
 
 class Login_controller extends CI_Controller {
     public function index(){
