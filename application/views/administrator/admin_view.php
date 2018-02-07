@@ -16,21 +16,21 @@
           <h3 class="header s12 light">Web Adminstrator Login</h3>
 
           <div class="row margin">
-            <div class="input-field prefix col s11">
-              <i class="prefix"></i>
-              <input id="username" type="text">
-              <label for="username" class="center-align">Username</label>
-            </div>
+          <div class="input-field col s11">
+            <i class="prefix"></i>
+            <input name="username" type="text" required>
+            <label for="username" class="center-align">Username</label>
           </div>
+        </div>
 
-          <div class="row margin">
-            <div class="input-field col s11">
-              <i class="prefix"></i>
-              <input id="password" type="password">
-              <label for="password">Password</label>
-            </div>
+        <div class="row margin">
+          <div class="input-field col s11">
+            <i class="prefix"></i>
+            <input name="password" type="password" required>
+            <label for="password">Password</label>
           </div>
-          <input type="submit" class="btn waves-effect waves-light" name="login" value="Login">
+        </div>
+        <input type="submit" class="btn" name="login_admin" value="Login">
           
         </form>
       </div>
