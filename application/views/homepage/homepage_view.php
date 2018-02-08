@@ -119,18 +119,17 @@
 
             <h5 class="header col s12 light">Interested? We'd love to connect!</h5>
             <form method="post" action="<?php echo base_url();?>Newsletter_controller/submit">
-            <div class="row">
-            <div class="input-field col s12">
-              <input type="text" class="validate" name="name" id="name" required>
-              <label for="name">Name</label>
-            </div>
-            <div class="input-field col s12">
-              <input type="text" class="validate" name="email" id="email" required>
-              <label for="email_address">Email Address</label>
-            </div>
-
-            <input type="submit" id="submit-button" class="btn-large waves-effect waves-light orange lighten-1"  name="submit" value="SUBMIT">
-            </div>
+              <div class="row">
+              <div class="input-field col s12">
+                <input type="text" class="validate" name="name" id="name" required>
+                <label for="name">Name</label>
+              </div>
+              <div class="input-field col s12">
+                <input type="text" class="validate" name="email" id="email" required>
+                <label for="email_address">Email Address</label>
+              </div>
+              <input type="submit" class="btn"  name="submit" value="SUBMIT">
+              </div>
             </form>
           </div>
         </div>
