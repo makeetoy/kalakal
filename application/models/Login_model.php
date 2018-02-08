@@ -11,6 +11,7 @@ class Login_model extends CI_Model
       return false;
     }
   }
+  
   function customername($username,$password){
     //$query = $this->db->query("SELECT custName FROM customer_tbl WHERE custUsername='$username' AND custPassword='$password');
     $this->db->select("custName");

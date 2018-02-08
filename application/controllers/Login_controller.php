@@ -21,6 +21,7 @@ class Login_controller extends CI_Controller {
           if($name->num_rows()> 0){
   					foreach($name->result() as $row){
                 echo "<br>Hello ". $row->custName;
+                redirect('/customer');
             }
           }
         }else{

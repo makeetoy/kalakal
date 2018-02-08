@@ -9,7 +9,7 @@
      <div class="center col s4 orange lighten-3 nav-wrapper container" style="width:500px;">
        <form>
          <div class="input-field">
-           <input id="search" type="search"/>
+           <input id="search" type="search">
          </div>
        </form>
      </div>

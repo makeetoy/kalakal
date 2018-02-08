@@ -1,6 +1,6 @@
     <title>Kalakal | A B2B Wholesale E-Commerce Platform</title>
     <!-- Plugin CSS -->
-    <link href="<?php echo base_url('assets/css/style.css'); ?>" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="<?php echo base_url('assets/css/style.css'); ?>" type="text/css" rel="stylesheet" media="screen,projection">
 
 
   </head>
