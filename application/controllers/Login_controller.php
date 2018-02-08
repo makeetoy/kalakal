@@ -14,9 +14,15 @@ class Login_controller extends CI_Controller {
       if($this->input->post('login_customer')=="Login as Customer"){
         $this->load->model('login_model');
         $username = $this->input->post('username');
-        $password = $this->input->post('password');
+        $password = sha1($this->input->post('password'));
         if($this->login_model->customerlogin($username,$password)){
           echo "Customer";
+          $name = $this->login_model->customername($username,$password);
+          if($name->num_rows()> 0){
+  					foreach($name->result() as $row){
+                echo "<br>Hello ". $row->custName;
+            }
+          }
         }else{
           echo "error";
         }
@@ -25,9 +31,15 @@ class Login_controller extends CI_Controller {
       else if($this->input->post('login_vendor')=="Login as Vendor"){
         $this->load->model('login_model');
         $username = $this->input->post('username');
-        $password = $this->input->post('password');
+        $password = sha1($this->input->post('password'));
         if($this->login_model->vendorlogin($username,$password)){
-          echo "vendor";
+          echo "Vendor";
+          $name = $this->login_model->vendorname($username,$password);
+          if($name->num_rows()> 0){
+  					foreach($name->result() as $row){
+                echo "<br>Hello ". $row->vendName;
+            }
+          }
         }else{
           echo "error";
         }
@@ -36,9 +48,15 @@ class Login_controller extends CI_Controller {
       else if($this->input->post('login_manufacturer')=="Login as Manufacturer"){
           $this->load->model('login_model');
           $username = $this->input->post('username');
-          $password = $this->input->post('password');
+          $password = sha1($this->input->post('password'));
           if($this->login_model->manufacturerlogin($username,$password)){
-            echo "manufacturer";
+            echo "Manufacturer";
+            $name = $this->login_model->manufacturername($username,$password);
+            if($name->num_rows()> 0){
+    					foreach($name->result() as $row){
+                  echo "<br>Hello ". $row->manuName;
+              }
+            }
           }else{
             echo "error";
           }

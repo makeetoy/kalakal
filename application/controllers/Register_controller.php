@@ -16,7 +16,7 @@ class Register_controller extends CI_Controller {
           "custEmail" => $this->input->post("email"),
           "custContact" => $this->input->post("contact"),
           "custUsername" => $this->input->post("username"),
-          "custPassword" => $this->input->post("password")
+          "custPassword" => sha1($this->input->post("password"))
       );
       $this->load->model('register_model');
       $this->register_model->registercustomer($data);
@@ -30,7 +30,7 @@ class Register_controller extends CI_Controller {
             "vendEmail" => $this->input->post("email"),
             "vendContact" => $this->input->post("contact"),
             "vendUsername" => $this->input->post("username"),
-            "vendPassword" => $this->input->post("password")
+            "vendPassword" => sha1($this->input->post("password"))
         );
         $this->load->model('register_model');
         $this->register_model->registervendor($data);
@@ -44,7 +44,7 @@ class Register_controller extends CI_Controller {
             "manuEmail" => $this->input->post("email"),
             "manuContact" => $this->input->post("contact"),
             "manuUsername" => $this->input->post("username"),
-            "manuPassword" => $this->input->post("password")
+            "manuPassword" => sha1($this->input->post("password"))
         );
         $this->load->model('register_model');
         $this->register_model->registermanufacturer($data);
