@@ -1,9 +1,6 @@
     <title>Kalakal | A B2B Wholesale E-Commerce Platform</title>
-    <!-- Plugin CSS -->
-    <link href="<?php echo base_url('assets/css/style.css'); ?>" type="text/css" rel="stylesheet" media="screen,projection">
-
-
   </head>
+
   <body>
     <div class="navbar-fixed">
       <nav class="white navbar-fixed main-navigation" role="navigation">
@@ -52,7 +49,7 @@
         <br><br>
       </div>
     </div>
-    <div class="parallax"><img src="<?php echo base_url('assets/img/header.jpg')?>" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="<?php echo base_url('assets/img/header.png')?>" alt="Unsplashed background img 1"></div>
   </div>
 
   <!-- Feature Section -->
@@ -139,5 +136,5 @@
           </div>
         </div>
       </div>
-      <div class="parallax"><img src="<?php echo base_url('assets/img/header.jpg');?>" alt="error"></div>
+      <div class="parallax"><img src="<?php echo base_url('assets/img/header.png');?>" alt="error"></div>
     </div>

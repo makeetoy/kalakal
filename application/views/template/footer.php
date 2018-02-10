@@ -29,16 +29,17 @@
     <script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/materialize.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/init.js'); ?>"></script>
-    
-   <!-- Bootstrap core JavaScript -->
-   <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/jquery.easing.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/scrollreveal.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/jquery.magnific-popup.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/creative.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/prism.js');?>"></script>
+    <script src="<?php echo base_url('assets/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js');?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('assets/js/plugins/data-tables/js/jquery.dataTables.min.js');?>" type="text/javascript" ></script>
+    <script src="<?php echo base_url('assets/js/plugins/data-tables/data-tables-script.js');?>" type="text/javascript" ></script>
+    <script src="<?php echo base_url('assets/js/plugins/chartist-js/chartist.min.js');?>" type="text/javascript" ></script>
+    <script src="<?php echo base_url('assets/js/plugins.js');?>" type="text/javascript"></script>
 
-   <!-- Plugin JavaScript -->
-   <script src="<?php echo base_url('assets/js/jquery.easing.min.js'); ?>"></script>
-   <script src="<?php echo base_url('assets/js/scrollreveal.min.js'); ?>"></script>
-   <script src="<?php echo base_url('assets/js/jquery.magnific-popup.min.js'); ?>"></script>
-
-   <!-- Custom scripts for this template -->
-   <script src="<?php echo base_url('assets/js/creative.min.js'); ?>"></script>
   </body>
 </html>
