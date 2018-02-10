@@ -4,17 +4,22 @@
 </head>
 
 <body>
+
+<!-- Side Navigation Dashboard -->
 <ul id="nav-mobile" class="side-nav fixed z-depth-2" style="width: 18%;">
-  <li class="center no-padding">
-    <div class="orange darken-2 white-text" style="height: 180px;">
+
+  <!-- User Header -->
+  <li class="center">
+    <div class="orange darken-2 white-text" style="height: 180px; padding:10px; ">
       <div class="row">
-        <img style="margin-top: 5%;" width="100px" height="100px" src="<?php echo base_url('assets/img/user-icon.png');?>" class="circle responsive-img" >
+        <img style="margin-top: 5%;" width="100px" height="100px"
+        src="<?php echo base_url('assets/img/user-icon.png');?>" class="circle responsive-img" >
         <p style="margin-top: -10%;"> User Account </p>
       </div>
     </div>
   </li>
 
-<!-- Side Navigation Dashboard -->
+  <!-- Side Links -->
   <li id="dash_dashboard"><a class="waves-effect" href="#!"><b>Dashboard</b></a></li>
   <ul class="collapsible" data-collapsible="accordion">
 
@@ -53,34 +58,37 @@
 </ul>
 
 <header>
+  <!-- Dropdown -->
   <ul class="dropdown-content" id="user_dropdown">
     <li><a class="orange-text" href="#!">Profile</a></li>
     <li><a class="orange-text" href="#!">Change Password</a></li>
     <li><a class="orange-text" href="#!">Logout</a></li>
   </ul>
+
+  <!-- Account Dropdown -->
   <nav class="orange" role="navigation">
     <div class="nav-wrapper">
       <a data-activates="slide-out" class="button-collapse show-on-" href="#!">
-        <img style="margin-top: 17px; margin-left: 5px;"
-          src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989873/smaller-main-logo_3_bm40iv.gif"></a>
       <ul class="right hide-on-med-and-down">
-        <li>Welcome, <b>Admin Account</b></li>
+        <li>
+          Welcome, <b>Admin Account</b>
+        </li>
         <li>
           <a class='right dropdown-button' href='' data-activates='user_dropdown'><i class=' material-icons'>account_circle</i></a>
         </li>
       </ul>
-
       <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
   </nav>
 
+ <!-- Breadcrumb -->
   <nav>
     <div class="nav-wrapper orange darken-2">
       <a style="margin-left: 20px;" class="breadcrumb" href="#!">Admin</a>
-      <a class="breadcrumb" href="#!">Index</a>
-
+      <a class="breadcrumb" href="#!">Dashboard</a>
       <div style="margin-right: 20px;" id="timestamp" class="right"></div>
     </div>
+
   </nav>
 </header>
 

@@ -1,5 +1,5 @@
   <footer class="page-footer grey darken-3">
-    <div class="container ">
+    <div class="container">
       <div class="row">
         <div class="col l6 s12 ">
           <img style = "height: 50px; width: 250px;"src="<?php echo base_url('assets/img/kalakal-logo2.png')?>" alt="Error">
@@ -29,13 +29,9 @@
     <script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/materialize.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/init.js'); ?>"></script>
-
-    <!-- Sweet Alert -->
-   <script src="<?php echo base_url('assets/js/success.js'); ?>"> </script>
-   <script src="<?php echo base_url('assets/js/sweetalert2.min.js'); ?>"> </script>
+    
    <!-- Bootstrap core JavaScript -->
    <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
-   <script src="<?php echo base_url('assets/js/bootstrap.bundle.min.js'); ?>"></script>
 
    <!-- Plugin JavaScript -->
    <script src="<?php echo base_url('assets/js/jquery.easing.min.js'); ?>"></script>
