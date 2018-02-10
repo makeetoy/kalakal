@@ -1,11 +1,10 @@
   <title>Kalakal.ph | Dashboard</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/dashboard.css'); ?>" type="text/css" rel="stylesheet">
-
 </head>
 
 <body>
-<ul id="nav-mobile" class="side-nav fixed z-depth-2">
+<ul id="nav-mobile" class="side-nav fixed z-depth-2" style="width: 18%;">
   <li class="center no-padding">
     <div class="orange darken-2 white-text" style="height: 180px;">
       <div class="row">
@@ -15,17 +14,23 @@
     </div>
   </li>
 
+<!-- Side Navigation Dashboard -->
   <li id="dash_dashboard"><a class="waves-effect" href="#!"><b>Dashboard</b></a></li>
-
   <ul class="collapsible" data-collapsible="accordion">
+
     <li id="dash_users">
       <div id="dash_users_header" class="collapsible-header waves-effect"><b>Users</b></div>
       <div id="dash_users_body" class="collapsible-body">
         <ul>
-          <li id="users_seller">
-            <a class="waves-effect" style="text-decoration: none;" href="#!">Seller</a>
+          <li id="users_admin">
+            <a class="waves-effect" style="text-decoration: none;" href="#!">Admin Account</a>
           </li>
-
+          <li id="users_supplier">
+            <a class="waves-effect" style="text-decoration: none;" href="#!">Supplier</a>
+          </li>
+          <li id="users_manufacturer">
+            <a class="waves-effect" style="text-decoration: none;" href="#!">Manufacturer</a>
+          </li>
           <li id="users_customer">
             <a class="waves-effect" style="text-decoration: none;" href="#!">Customer</a>
           </li>
@@ -44,50 +49,22 @@
         </ul>
       </div>
     </li>
-
-    <li id="dash_categories">
-      <div id="dash_categories_header" class="collapsible-header waves-effect"><b>Categories</b></div>
-      <div id="dash_categories_body" class="collapsible-body">
-        <ul>
-          <li id="categories_category">
-            <a class="waves-effect" style="text-decoration: none;" href="#!">Category</a>
-          </li>
-
-          <li id="categories_sub_category">
-            <a class="waves-effect" style="text-decoration: none;" href="#!">Sub Category</a>
-          </li>
-        </ul>
-      </div>
-    </li>
-
-    <li id="dash_brands">
-      <div id="dash_brands_header" class="collapsible-header waves-effect"><b>Brands</b></div>
-      <div id="dash_brands_body" class="collapsible-body">
-        <ul>
-          <li id="brands_brand">
-            <a class="waves-effect" style="text-decoration: none;" href="#!">Brand</a>
-          </li>
-
-          <li id="brands_sub_brand">
-            <a class="waves-effect" style="text-decoration: none;" href="#!">Sub Brand</a>
-          </li>
-        </ul>
-      </div>
-    </li>
   </ul>
 </ul>
 
 <header>
   <ul class="dropdown-content" id="user_dropdown">
     <li><a class="orange-text" href="#!">Profile</a></li>
+    <li><a class="orange-text" href="#!">Change Password</a></li>
     <li><a class="orange-text" href="#!">Logout</a></li>
   </ul>
-
   <nav class="orange" role="navigation">
     <div class="nav-wrapper">
-      <a data-activates="slide-out" class="button-collapse show-on-" href="#!"><img style="margin-top: 17px; margin-left: 5px;" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989873/smaller-main-logo_3_bm40iv.gif" /></a>
-
+      <a data-activates="slide-out" class="button-collapse show-on-" href="#!">
+        <img style="margin-top: 17px; margin-left: 5px;"
+          src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463989873/smaller-main-logo_3_bm40iv.gif"></a>
       <ul class="right hide-on-med-and-down">
+        <li>Welcome, <b>Admin Account</b></li>
         <li>
           <a class='right dropdown-button' href='' data-activates='user_dropdown'><i class=' material-icons'>account_circle</i></a>
         </li>
@@ -108,122 +85,8 @@
 </header>
 
 <main>
-  <div class="row">
-    <div class="col s6">
-      <div style="padding: 35px;" align="center" class="card">
-        <div class="row">
-          <div class="left card-title">
-            <b>User Management</b>
-          </div>
-        </div>
 
-        <div class="row">
-          <a href="#!">
-            <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-              <i class="orange-text text-lighten-1 large material-icons">person</i>
-              <span class="orange-text text-lighten-1"><h5>Seller</h5></span>
-            </div>
-          </a>
-          <div class="col s1">&nbsp;</div>
-          <div class="col s1">&nbsp;</div>
-
-          <a href="#!">
-            <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-              <i class="orange-text text-lighten-1 large material-icons">people</i>
-              <span class="orange-text text-lighten-1"><h5>Customer</h5></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col s6">
-      <div style="padding: 35px;" align="center" class="card">
-        <div class="row">
-          <div class="left card-title">
-            <b>Product Management</b>
-          </div>
-        </div>
-        <div class="row">
-          <a href="#!">
-            <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-              <i class="orange-text text-lighten-1 large material-icons">store</i>
-              <span class="orange-text text-lighten-1"><h5>Product</h5></span>
-            </div>
-          </a>
-
-          <div class="col s1">&nbsp;</div>
-          <div class="col s1">&nbsp;</div>
-
-          <a href="#!">
-            <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-              <i class="orange-text text-lighten-1 large material-icons">assignment</i>
-              <span class="orange-text text-lighten-1"><h5>Orders</h5></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col s6">
-      <div style="padding: 35px;" align="center" class="card">
-        <div class="row">
-          <div class="left card-title">
-            <b>Brand Management</b>
-          </div>
-        </div>
-
-        <div class="row">
-          <a href="#!">
-            <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-              <i class="orange-text text-lighten-1 large material-icons">local_offer</i>
-              <span class="orange-text text-lighten-1"><h5>Brand</h5></span>
-            </div>
-          </a>
-
-          <div class="col s1">&nbsp;</div>
-          <div class="col s1">&nbsp;</div>
-
-          <a href="#!">
-            <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-              <i class="orange-text text-lighten-1 large material-icons">loyalty</i>
-              <span class="orange-text text-lighten-1"><h5>Sub Brand</h5></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col s6">
-      <div style="padding: 35px;" align="center" class="card">
-        <div class="row">
-          <div class="left card-title">
-            <b>Category Management</b>
-          </div>
-        </div>
-        <div class="row">
-          <a href="#!">
-            <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-              <i class="orange-text text-lighten-1 large material-icons">view_list</i>
-              <span class="orange-text text-lighten-1"><h5>Category</h5></span>
-            </div>
-          </a>
-          <div class="col s1">&nbsp;</div>
-          <div class="col s1">&nbsp;</div>
-
-          <a href="#!">
-            <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
-              <i class="orange-text text-lighten-1 large material-icons">view_list</i>
-              <span class="truncate orange-text text-lighten-1"><h5>Sub Category</h5></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+<!-- Quick Action -->
   <div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
     <a class="btn-floating btn-large pink waves-effect waves-light">
       <i class="large material-icons">add</i>
@@ -234,7 +97,6 @@
         <a class="btn-floating red"><i class="material-icons">note_add</i></a>
         <a href="" class="btn-floating fab-tip">Add a note</a>
       </li>
-
       <li>
         <a class="btn-floating yellow darken-1"><i class="material-icons">add_a_photo</i></a>
         <a href="" class="btn-floating fab-tip">Add a photo</a>

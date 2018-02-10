@@ -22,7 +22,7 @@ class Administrator_controller extends CI_Controller {
 	}
 
 	public function login(){
-		redirect('admin/dashboard');
+		redirect('/customerdash');
 	}
 
 

@@ -59,3 +59,4 @@ $route['vendor'] = 'Vendor_controller';
 $route['manufacturer'] = 'Manufacturer_controller' ;
 $route['customer'] = 'Customer_controller';
 $route['store'] = 'Store_controller';
+$route['customerdash'] = 'Administrator_controller/dashboard';
