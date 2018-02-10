@@ -5,28 +5,31 @@
 
   </head>
   <body>
-    <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="<?php echo base_url()?>" class="brand-logo ">Kalakal.ph</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="<?php echo base_url()?>login">Login</a></li>
-        <li><a href="<?php echo base_url()?>register">Register</a></li>
-        <li><a class="nav-link js-scroll-trigger" href="#features">Features</a></li>
-        <li><a class="nav-link js-scroll-trigger" href="#newsletter">Newsletter</a></li>
-        <li><a class="orange waves-effect waves-light btn" href="<?php echo base_url()?>store">Visit Store</a></li>
-      </ul>
+    <div class="navbar-fixed">
+      <nav class="white navbar-fixed main-navigation" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="<?php echo base_url()?>" class="brand-logo ">Kalakal.ph</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="<?php echo base_url()?>login">Login</a></li>
+            <li><a href="<?php echo base_url()?>register">Register</a></li>
+            <li><a class="nav-link js-scroll-trigger" href="#features">Features</a></li>
+            <li><a class="nav-link js-scroll-trigger" href="#newsletter">Newsletter</a></li>
+            <li><a class="orange waves-effect waves-light btn" href="<?php echo base_url()?>store">Visit Store</a></li>
+          </ul>
 
-      <!-- Navbar converts to side menu when mobile mode -->
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="<?php echo base_url()?>login">Login</a></li>
-        <li><a href="<?php echo base_url()?>register">Register</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
-        <li><a class="orange waves-effect waves-light btn" href="#">Visit Store</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+          <!-- Navbar converts to side menu when mobile mode -->
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="<?php echo base_url()?>login">Login</a></li>
+            <li><a href="<?php echo base_url()?>register">Register</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a class="orange waves-effect waves-light btn" href="#">Visit Store</a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
     </div>
-  </nav>
+
 
   <div id="index-banner" class="parallax-container" style="padding: 100px">
     <div class="section no-pad-bot">
@@ -38,11 +41,13 @@
             platform for entrepreneurs looking for goods at the best price</h5>
         </div>
         <div class="row center">
-          <div class="input-field col s9">
+          <div class="input-field col s8">
             <input type="text" class="validate">
             <label for="first_name">Email Address</label>
           </div>
-          <a href="#" id="submit-button" class="btn-large waves-effect waves-light orange lighten-1">Get Started</a>
+          <div class="col s4">
+            <a href="#" id="submit-button" class="btn-large waves-effect waves-light orange lighten-1">Get Started</a>
+          </div>
         </div>
         <br><br>
       </div>

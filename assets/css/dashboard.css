@@ -4,10 +4,6 @@ footer {
   padding-left: 240px;
 }
 
-body {
-  backgroud: white;
-}
-
 @media only screen and (max-width: 992px) {
   header,
   main,

@@ -15,10 +15,16 @@ class Administrator_controller extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function login(){
+	public function dashboard(){
 		$this->load->view('template/header');
 		$this->load->view('administrator/adminDash_view');
 		$this->load->view('template/footer');
 	}
+
+	public function login(){
+		redirect('admin/dashboard');
+	}
+
+
 }
 ?>

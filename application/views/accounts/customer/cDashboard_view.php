@@ -1,19 +1,17 @@
   <title>Kalakal.ph | Dashboard</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/dashboard.css'); ?>" type="text/css" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/style.css'); ?>" type="text/css" rel="stylesheet" media="screen,projection">
 </head>
 
 <body>
 
-  <ul id="slide-out" class="side-nav fixed z-depth-2">
+  <ul id="nav-mobile" class="side-nav fixed z-depth-2">
     <li class="center no-padding">
       <div class="orange darken-2 white-text" style="height: 180px;">
         <div class="row">
-          <img style="margin-top: 5%;" width="100" height="100" src="https://res.cloudinary.com/dacg0wegv/image/upload/t_media_lib_thumb/v1463990208/photo_dkkrxc.png" class="circle responsive-img" />
-
-          <p style="margin-top: -13%;">
-            Tirth Patel
-          </p>
+          <img style="margin-top: 5%;" width="100px" height="100px" src="<?php echo base_url('assets/img/user-icon.png');?>" class="circle responsive-img" >
+          <p style="margin-top: -10%;"> User Account </p>
         </div>
       </div>
     </li>
