@@ -16,14 +16,8 @@ class Login_controller extends CI_Controller {
         $username = $this->input->post('username');
         $password = sha1($this->input->post('password'));
         if($this->login_model->customerlogin($username,$password)){
-          echo "Customer";
-          $name = $this->login_model->customername($username,$password);
-          if($name->num_rows()> 0){
-  					foreach($name->result() as $row){
-                echo "<br>Hello ". $row->custName;
-                redirect('/customer');
-            }
-          }
+          $this->login_model->updatecustomer($username,$password,1);
+          redirect(base_url());
         }else{
           echo "error";
         }

@@ -11,7 +11,14 @@
       <div class="orange darken-2 white-text" style="height: 180px;">
         <div class="row">
           <img style="margin-top: 5%;" width="100px" height="100px" src="<?php echo base_url('assets/img/user-icon.png');?>" class="circle responsive-img" >
-          <p style="margin-top: -10%;"> User Account </p>
+          <?php
+          if(isset($name)){
+            foreach($name->result() as $row){
+                echo '<p style="margin-top: -10%;"> '.$row->custName.'</p>';
+            }
+          }
+          ?>
+
         </div>
       </div>
     </li>
@@ -79,9 +86,11 @@
   </ul>
 
   <header>
+
+    <h1></h1>
     <ul class="dropdown-content" id="user_dropdown">
       <li><a class="orange-text" href="#!">Profile</a></li>
-      <li><a class="orange-text" href="#!">Logout</a></li>
+      <li><a class="orange-text" href="<?php echo base_url()?>IsLogin_controller/logoutcustomer">Logout</a></li>
     </ul>
 
     <nav class="orange" role="navigation">

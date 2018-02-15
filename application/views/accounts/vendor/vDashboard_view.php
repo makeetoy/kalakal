@@ -1,6 +1,6 @@
   <title>Kalakal | Dashboard </title>
 <body>
-  
+
 <nav class="white" role="navigation">
 <div class="nav-wrapper container">
   <a id="logo-container" href="<?php echo base_url()?>" class="brand-logo">Kalakal.ph</a>
