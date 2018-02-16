@@ -1,4 +1,4 @@
-<title>Maufacturer Dashboard</title>
+<title>Manufacturer Dashboard</title>
 
 <body>
     <div class="wrapper">
@@ -22,37 +22,41 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/user">
+                        <a class="nav-link" href="<?php echo base_url();?>Manufacturer_controller/user">
                             <i class="nc-icon nc-circle-09"></i>
-                            <p>User Profile</p>
+                            <?php
+                            foreach($name->result() as $row){
+                              echo '<p>'.$row->manuName.'</p>';
+                            }
+                            ?>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/table">
+                        <a class="nav-link" href="<?php echo base_url();?>Manufacturer_controller/table">
                             <i class="nc-icon nc-notes"></i>
                             <p>Table List</p>
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/typography">
+                        <a class="nav-link" href="<?php echo base_url();?>Manufacturer_controller/typography">
                             <i class="nc-icon nc-paper-2"></i>
                             <p>Typography</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/icon">
+                        <a class="nav-link" href="<?php echo base_url();?>Manufacturer_controller/icon">
                             <i class="nc-icon nc-atom"></i>
                             <p>Icons</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/maps">
+                        <a class="nav-link" href="<?php echo base_url();?>Manufacturer_controller/maps">
                             <i class="nc-icon nc-pin-3"></i>
                             <p>Maps</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/notifications">
+                        <a class="nav-link" href="<?php echo base_url();?>Manufacturer_controller/notifications">
                             <i class="nc-icon nc-bell-55"></i>
                             <p>Notifications</p>
                         </a>
@@ -119,7 +123,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo base_url();?>IsLogin_controller/logoutcustomer">
+                                <a class="nav-link" href="<?php echo base_url();?>Login_controller/logoutmanufacturer">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>
