@@ -37,8 +37,8 @@ class Homepage_controller extends CI_Controller {
 			if($customer==1){
 				$this->load->model('login_model');
 				$data['name']=$this->login_model->customerdata($customer);
-				$this->load->view('template/header');
-				$this->load->view('accounts/customer/cDashboard_view',$data);
+				$this->load->view('template/custheader');
+				$this->load->view('accounts/customer/dashboard',$data);
 				$this->load->view('template/footer');
 			}
 			else if($vendor==1){
