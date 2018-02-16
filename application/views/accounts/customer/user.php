@@ -10,7 +10,7 @@
             <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="http://www.creative-tim.com" class="simple-text">
-                        Creative Tim
+                        <b> Kalakal.ph </b>
                     </a>
                 </div>
                 <ul class="nav">
