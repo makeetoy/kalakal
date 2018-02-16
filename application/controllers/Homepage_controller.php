@@ -9,9 +9,9 @@ class Homepage_controller extends CI_Controller {
 
 	public function index(){
 		$this->load->model("IsLogin_model");
-		$logincust=$this->IsLogin_model->iflogin();
-		$loginvend=$this->IsLogin_model->iflogin();
-		$loginmanu=$this->IsLogin_model->iflogin();
+		$logincust=$this->IsLogin_model->ifcustlogin();
+		$loginvend=$this->IsLogin_model->ifvendlogin();
+		$loginmanu=$this->IsLogin_model->ifmanulogin();
 		$customer = 0;
 		$vendor = 0;
 		$manufacturer = 0;
@@ -21,8 +21,7 @@ class Homepage_controller extends CI_Controller {
 					break;
 				}
 			}
-			// For procsss
-			/*foreach($loginvend->result() as $row){
+			foreach($loginvend->result() as $row){
 				if($row->vendLogin == 1){
 					$vendor=1;
 					break;
@@ -30,10 +29,10 @@ class Homepage_controller extends CI_Controller {
 			}
 			foreach($loginmanu->result() as $row){
 				if($row->manuLogin == 1){
-					$manu=1;
+					$manufactuer=1;
 					break;
 				}
-			}*/
+			}
 			if($customer==1){
 				$this->load->model('login_model');
 				$data['name']=$this->login_model->customerdata($customer);
@@ -42,10 +41,14 @@ class Homepage_controller extends CI_Controller {
 				$this->load->view('template/footer');
 			}
 			else if($vendor==1){
-				echo 'hello vend';
+				$this->load->view('template/custheader');
+				$this->load->view('accounts/vendor/dashboard');
+				$this->load->view('template/footer');
 			}
 			else if($manufacturer==1){
-				echo 'hello manu';
+				$this->load->view('template/custheader');
+				$this->load->view('accounts/manufactuer/dashboard');
+				$this->load->view('template/footer');
 			}
 			else{
 				$this->load->view('template/header');

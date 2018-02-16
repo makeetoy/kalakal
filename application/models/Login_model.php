@@ -37,12 +37,17 @@ class Login_model extends CI_Model
       return false;
     }
   }
-  function vendorname($username,$password){
+  function updatevendor($username,$password,$id){
+    $this->db->set("vendLogin",$id);
+    $this->db->where('vendUsername',$username);
+    $this->db->where('vendPassword',$password);
+    $this->db->update("vendor_tbl");
+  }
+  function vendordata($id){
     //$query = $this->db->query("SELECT custName FROM customer_tbl WHERE custUsername='$username' AND custPassword='$password');
-    $this->db->select("vendName");
+    $this->db->select("*");
 		$this->db->from("vendor_tbl");
-    $this->db->where("vendUsername",$username);
-    $this->db->where("vendPassword",$password);
+    $this->db->where("vendLogin",$id);
 		$query=$this->db->get();
     return $query;
   }

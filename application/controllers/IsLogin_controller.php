@@ -19,6 +19,26 @@ class IsLogin_controller extends CI_Controller {
       $this->login_model->updatecustomer($username,$password,0);
       redirect(base_url());
     }
+    public function logoutvendor(){
+      $this->load->model('login_model');
+      $venddata = $this->login_model->vendordata(1);
+      foreach($venddata->result() as $row){
+        $username = $row->vendUsername;
+        $password = $row->vendPassword;
+      }
+      $this->login_model->updatevendor($username,$password,0);
+      redirect(base_url());
+    }
+    public function logoutmanufacturer(){
+      $this->load->model('login_model');
+      $manudata = $this->login_model->manufactuerdata(1);
+      foreach($manudata->result() as $row){
+        $username = $row->manuUsername;
+        $password = $row->manuPassword;
+      }
+      $this->login_model->updatemanufacturer($username,$password,0);
+      redirect(base_url());
+    }
 
 
 }

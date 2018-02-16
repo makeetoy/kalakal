@@ -1,4 +1,4 @@
-<title>Customer Dashboard</title>
+<title>Maufacturer Dashboard</title>
 <body>
     <div class="wrapper">
         <div class="sidebar" data-color="orange" data-image="<?php echo base_url('assets/img/sidebar-2.jpg'); ?>" >
@@ -21,37 +21,37 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/user">
+                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/user">
                             <i class="nc-icon nc-circle-09"></i>
                             <p>User Profile</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/table">
+                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/table">
                             <i class="nc-icon nc-notes"></i>
                             <p>Table List</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/typography">
+                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/typography">
                             <i class="nc-icon nc-paper-2"></i>
                             <p>Typography</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/icon">
+                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/icon">
                             <i class="nc-icon nc-atom"></i>
                             <p>Icons</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/maps">
+                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/maps">
                             <i class="nc-icon nc-pin-3"></i>
                             <p>Maps</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/notifications">
+                        <a class="nav-link" href="<?php echo base_url();?>Maufacturer_controller/notifications">
                             <i class="nc-icon nc-bell-55"></i>
                             <p>Notifications</p>
                         </a>
