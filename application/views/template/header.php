@@ -12,12 +12,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta name="author" content="Kalakal">
   <link rel="icon" type="image" href="<?php echo base_url('assets/img/favicon.png')?>" />
 
-  <!-- CSS  -->
-  <link href="<?php echo base_url('assets/css/materialize.css'); ?>" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="<?php echo base_url('assets/css/style.css'); ?>" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="<?php echo base_url('assets/css/custom-style.css');?>" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="<?php echo base_url('assets/css/jquery.dataTables.min.css');?>" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="<?php echo base_url('assets/css/prism.css');?>" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="<?php echo base_url('assets/js/plugins/perfect-scrollbar/perfect-scrollbar.css');?>" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="<?php echo base_url('assets/js/plugins/data-tables/css/jquery.dataTables.min.css');?>" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="<?php echo base_url('assets/js/plugins/chartist-js/chartist.min.css');?>" type="text/css" rel="stylesheet" media="screen,projection">
+  <!-- Material Design Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="<?php echo base_url('assets/css/creative.min.css'); ?>" rel="stylesheet">
