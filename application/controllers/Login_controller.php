@@ -27,14 +27,9 @@ class Login_controller extends CI_Controller {
         $this->load->model('login_model');
         $username = $this->input->post('username');
         $password = sha1($this->input->post('password'));
-        if($this->login_model->vendorlogin($username,$password)){
-          echo "Vendor";
-          $name = $this->login_model->vendorname($username,$password);
-          if($name->num_rows()> 0){
-  					foreach($name->result() as $row){
-                echo "<br>Hello ". $row->vendName;
-            }
-          }
+        if($this->login_model->vendorlogin($username,$password)){;
+          $this->login_model->updatevendor($username,$password,1);
+          redirect(base_url());
         }else{
           echo "error";
         }
@@ -44,18 +39,12 @@ class Login_controller extends CI_Controller {
           $this->load->model('login_model');
           $username = $this->input->post('username');
           $password = sha1($this->input->post('password'));
-          if($this->login_model->manufacturerlogin($username,$password)){
-            echo "Manufacturer";
-            $name = $this->login_model->manufacturername($username,$password);
-            if($name->num_rows()> 0){
-    					foreach($name->result() as $row){
-                  echo "<br>Hello ". $row->manuName;
-              }
-            }
+          if($this->login_model->manufacturerlogin($username,$password)){;
+            redirect(base_url());
           }else{
             echo "error";
           }
-      }
     }
+  }
 }
 ?>
