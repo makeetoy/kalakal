@@ -16,6 +16,13 @@
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="<?php echo base_url()?>register">Register</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -40,16 +47,12 @@
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
-      <select class="form-control" id="selectUser" name="usertype">
+      <label class="mt-2" for="selectUser">Login as:</label>
+      <select class="form-control mb-3" id="selectUser" name="usertype">
         <option value="customer">Customer</option>
         <option value="vendor">Vendor</option>
         <option value="manufacturer">Manufacturer</option>
       </select>
 
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
+      <input class="btn btn-lg btn-primary btn-block" type="submit" value="Register">
     </form>
