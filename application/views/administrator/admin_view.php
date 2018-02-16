@@ -1,38 +1,49 @@
   <title>Kalakal | Web Administrator </title>
+  
+  <!-- Custom fonts for this template -->
+  <link href="<?php echo base_url('assets/css/login.css'); ?>" rel="stylesheet">
+
 </head>
 
-<body>
-  <!-- Header -->
-  <nav class="orange" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="<?php echo base_url()?>" class="brand-logo">Kalakal.ph</a>
-    </div>
-  </nav>
+<body class="text-center">
 
-  <div class="container" style="padding: 50px 100px 100px 100px;">
-    <div class="center col s12 z-depth-4 card-panel">
-      <div class="row">
-        <form class="form" method="post" action="<?php echo base_url();?>Administrator_controller/login">
-          <h3 class="header s12 light">Web Adminstrator Login</h3>
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="<?php echo base_url()?>">Kalakal.ph</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarCollapse" aria-controls="navbarCollapse"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </header>
 
-          <div class="row margin">
-          <div class="input-field col s11">
-            <i class="prefix"></i>
-            <input name="username" type="text" required>
-            <label for="username" class="center-align">Username</label>
-          </div>
-        </div>
 
-        <div class="row margin">
-          <div class="input-field col s11">
-            <i class="prefix"></i>
-            <input name="password" type="password" required>
-            <label for="password">Password</label>
-          </div>
-        </div>
-        <input type="submit" class="btn" name="login_admin" value="Login">
-          
-        </form>
-      </div>
-    </div>
-  </div>
+
+   <form action="<?php echo base_url();?>Administrator_controller/login" method="post">
+     <img class="mb-4" src="<?php echo base_url('assets/img/favicon.png')?>" alt="" width="72" height="72">
+     <h1 class="h3 mb-3 font-weight-normal">Web Administrator Login</h1>
+
+     <?php
+        if(isset($status)){
+          if (!$status) {
+            echo '<div class="alert alert-danger" role="alert">
+                    <strong>Error!</strong> wrong email or password.
+                  </div>';
+          }
+        }
+      ?>
+
+
+     <label for="inputEmail" class="sr-only">Email address</label>
+     <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+     <label for="inputPassword" class="sr-only">Password</label>
+     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+     <div class="checkbox mb-3">
+       <label>
+         <input type="checkbox" value="remember-me"> Remember me
+       </label>
+     </div>
+     <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
+   </form>
