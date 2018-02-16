@@ -1,6 +1,6 @@
 
     <!-- Footer -->
-    <footer class="footer fixed-bottom text-white bg-dark">
+    <footer class="footer fixed-bottom text-white bg-dark" style="padding: 10px">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 h-100 text-center text-lg-left my-auto">
