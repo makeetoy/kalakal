@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2018 at 12:51 PM
+-- Generation Time: Feb 16, 2018 at 11:21 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -86,15 +86,16 @@ CREATE TABLE `manufacturer_tbl` (
   `manuContact` varchar(11) NOT NULL,
   `manuEmail` varchar(11) NOT NULL,
   `manuUsername` varchar(11) NOT NULL,
-  `manuPassword` varchar(50) NOT NULL
+  `manuPassword` varchar(50) NOT NULL,
+  `manuLogin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `manufacturer_tbl`
 --
 
-INSERT INTO `manufacturer_tbl` (`manufacturerID`, `manuName`, `manuAddress`, `manuContact`, `manuEmail`, `manuUsername`, `manuPassword`) VALUES
-(1, 'asdasasd', 'asd', '12345678901', 'asdas@gagas', 'asd', 'asd');
+INSERT INTO `manufacturer_tbl` (`manufacturerID`, `manuName`, `manuAddress`, `manuContact`, `manuEmail`, `manuUsername`, `manuPassword`, `manuLogin`) VALUES
+(1, 'asdasasd', 'asd', '12345678901', 'asdas@gagas', 'asd', 'asd', 0);
 
 -- --------------------------------------------------------
 
@@ -159,17 +160,18 @@ CREATE TABLE `vendor_tbl` (
   `vendContact` varchar(11) NOT NULL,
   `vendEmail` varchar(11) NOT NULL,
   `vendUsername` varchar(11) NOT NULL,
-  `vendPassword` varchar(50) NOT NULL
+  `vendPassword` varchar(50) NOT NULL,
+  `vendLogin` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `vendor_tbl`
 --
 
-INSERT INTO `vendor_tbl` (`vendorID`, `vendName`, `vendAddress`, `vendContact`, `vendEmail`, `vendUsername`, `vendPassword`) VALUES
-(1, 'asdasd', '123123', '123132123', '123123@asd', 'asd', '123'),
-(2, 'asdasasas', 'asd', 'asd2', 'asd@asd123.', 'asd2', 'asd2'),
-(3, 'asd', 'asd', '09123123', 'asd@asd', 'asd', 'f10e2821bbbea527ea02200352313bc059445190');
+INSERT INTO `vendor_tbl` (`vendorID`, `vendName`, `vendAddress`, `vendContact`, `vendEmail`, `vendUsername`, `vendPassword`, `vendLogin`) VALUES
+(1, 'asdasd', '123123', '123132123', '123123@asd', 'asd', '123', 0),
+(2, 'asdasasas', 'asd', 'asd2', 'asd@asd123.', 'asd2', 'asd2', 0),
+(3, 'asd', 'asd', '09123123', 'asd@asd', 'asd', 'f10e2821bbbea527ea02200352313bc059445190', 0);
 
 --
 -- Indexes for dumped tables
