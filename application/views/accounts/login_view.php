@@ -3,25 +3,29 @@
   <!-- Custom fonts for this template -->
   <link href="<?php echo base_url('assets/css/login.css'); ?>" rel="stylesheet">
 
+  <!-- Plugin CSS -->
+  <link href="<?php echo base_url('assets/css/magnific-popup.css'); ?>" rel="stylesheet">
+
 </head>
 
 <body class="text-center">
 
     <header>
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="<?php echo base_url()?>">Kalakal.ph</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-          data-target="#navbarCollapse" aria-controls="navbarCollapse"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="<?php echo base_url()?>register">Register</a>
-            </li>
-          </ul>
+      <!-- Navigation Barr -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" >
+        <div class="container">
+          <a class="navbar-brand" href="<?php echo base_url()?>">Kalakal.ph</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                  data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="<?php echo base_url()?>register">Register</a>
+              </li>
+          </div>
         </div>
       </nav>
     </header>
@@ -54,5 +58,5 @@
         <option value="manufacturer">Manufacturer</option>
       </select>
 
-      <input class="btn btn-lg btn-primary btn-block" type="submit" value="Register">
+      <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
     </form>
