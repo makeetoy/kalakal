@@ -4,11 +4,6 @@
 <body>
     <div class="wrapper">
         <div class="sidebar" data-color="orange" data-image="<?php echo base_url('assets/img/sidebar-2.jpg'); ?>">
-            <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
             <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="#" class="simple-text">
@@ -33,16 +28,16 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/table">
-                            <i class="nc-icon nc-notes"></i>
-                            <p>Table List</p>
-                        </a>
+                      <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/table">
+                        <i class="nc-icon nc-notes"></i>
+                        <p>Table List</p>
+                      </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/typography">
-                            <i class="nc-icon nc-paper-2"></i>
-                            <p>Typography</p>
-                        </a>
+                      <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/typography">
+                        <i class="nc-icon nc-paper-2"></i>
+                        <p>Typography</p>
+                      </a>
                     </li>
                     <li>
                         <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/icon" >
