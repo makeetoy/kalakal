@@ -35,15 +35,9 @@
       <img class="mb-4" src="<?php echo base_url('assets/img/favicon.png')?>" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Kalakal User Login</h1>
 
-      <?php
-         if(isset($status)){
-           if (!$status) {
-             echo '<div class="alert alert-danger" role="alert">
-                     <strong>Error!</strong> wrong email or password.
-                   </div>';
-           }
-         }
-       ?>
+    <?php
+      echo "<p class='text-danger'>".$this->session->flashdata("error")."<p>";
+     ?>
 
 
       <label for="inputUsername" class="sr-only">Username</label>

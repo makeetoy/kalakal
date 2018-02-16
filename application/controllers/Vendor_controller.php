@@ -9,38 +9,45 @@ class Vendor_controller extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 	public function icon(){
+		$this->load->model('login_model');
+		$data['name']=$this->login_model->vendordata($this->session->userdata('username'));
 		$this->load->view('template/custheader');
-		$this->load->view('accounts/vendor/icons');
+		$this->load->view('accounts/vendor/icons',$data);
 		$this->load->view('template/footer');
 	}
 	public function maps(){
+		$this->load->model('login_model');
+		$data['name']=$this->login_model->vendordata($this->session->userdata('username'));
 		$this->load->view('template/custheader');
-		$this->load->view('accounts/vendor/maps');
-		$this->load->view('template/footer');
+		$this->load->view('accounts/vendor/maps',$data);
+		$this->load->view('template/footer');,
 	}
 	public function notifications(){
+		$this->load->model('login_model');
+		$data['name']=$this->login_model->vendordata($this->session->userdata('username'));
 		$this->load->view('template/custheader');
-		$this->load->view('accounts/vendor/notifications');
+		$this->load->view('accounts/vendor/notifications',$data);
 		$this->load->view('template/footer');
 	}
 	public function table(){
+		$this->load->model('login_model');
+		$data['name']=$this->login_model->vendordata($this->session->userdata('username'));
 		$this->load->view('template/custheader');
-		$this->load->view('accounts/vendor/table');
+		$this->load->view('accounts/vendor/table',$data);
 		$this->load->view('template/footer');
 	}
 	public function typography(){
+		$this->load->model('login_model');
+		$data['name']=$this->login_model->vendordata($this->session->userdata('username'));
 		$this->load->view('template/custheader');
-		$this->load->view('accounts/vendor/typography');
-		$this->load->view('template/footer');
-	}
-	public function upgrade(){
-		$this->load->view('template/custheader');
-		$this->load->view('accounts/vendor/upgrade');
+		$this->load->view('accounts/vendor/typography',$data);
 		$this->load->view('template/footer');
 	}
 	public function user(){
+		$this->load->model('login_model');
+		$data['name']=$this->login_model->vendordata($this->session->userdata('username'));
 		$this->load->view('template/custheader');
-		$this->load->view('accounts/vendor/user');
+		$this->load->view('accounts/vendor/user',$data);
 		$this->load->view('template/footer');
 	}
 }
