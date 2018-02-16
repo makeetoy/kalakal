@@ -32,7 +32,7 @@
             <a class="nav-link js-scroll-trigger" href="#newsletter">Newsletter</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-primary" href="#">Visit Store</a>
+            <a class="btn btn-primary" href="<?php echo base_url()?>store">Visit Store</a>
           </li>
         </ul>
       </div>
