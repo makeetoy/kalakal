@@ -135,14 +135,14 @@
   <section id="newsletter" class="bg-primary text-white">
     <div class="container">
       <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-        <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+        <h2 class="mb-4">Get updates thru our daily newsletter!</h2>
         <form>
           <div class="form-row">
             <div class="col-12 col-md-9 mb-2 mb-md-0">
               <input id="email" name="email" type="email" class="form-control form-control-lg" placeholder="Enter your email...">
             </div>
             <div class="col-12 col-md-3">
-              <button type="submit" value="SUBMIT" class="btn btn-block btn-lg btn-secondary">Sign up!</button>
+              <button type="submit" value="SUBMIT" class="btn btn-block btn-lg btn-secondary">Submit</button>
             </div>
           </div>
         </form>
