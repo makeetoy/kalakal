@@ -1,4 +1,5 @@
   <title>Kalakal | Web Administrator </title>
+  
   <!-- Custom fonts for this template -->
   <link href="<?php echo base_url('assets/css/login.css'); ?>" rel="stylesheet">
 
@@ -18,9 +19,23 @@
       </nav>
     </header>
 
+
+
    <form action="<?php echo base_url();?>Administrator_controller/login" method="post">
      <img class="mb-4" src="<?php echo base_url('assets/img/favicon.png')?>" alt="" width="72" height="72">
      <h1 class="h3 mb-3 font-weight-normal">Web Administrator Login</h1>
+
+     <?php
+        if(isset($status)){
+          if (!$status) {
+            echo '<div class="alert alert-danger" role="alert">
+                    <strong>Error!</strong> wrong email or password.
+                  </div>';
+          }
+        }
+      ?>
+
+
      <label for="inputEmail" class="sr-only">Email address</label>
      <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
      <label for="inputPassword" class="sr-only">Password</label>

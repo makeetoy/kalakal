@@ -15,6 +15,12 @@ class Administrator_controller extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function adminIndex($data){
+		$this->load->view('template/header');
+		$this->load->view('administrator/admin_view', $data);
+		$this->load->view('template/footer');
+	}
+
 	public function dashboard(){
 		$this->load->view('template/header');
 		$this->load->view('administrator/adminDash_view');
@@ -25,10 +31,11 @@ class Administrator_controller extends CI_Controller {
 			$this->load->model('Admin_model');
 			$email = $this->input->post('email');
 			$password = $this->input->post('password');
-			if($this->Admin_model->adminlogin($email,$password)){
+			if($this->Admin_model->adminLogin($email,$password)){
 				redirect('/admindash');
 			}else{
-				echo "error";
+				$data['status'] = false;
+				$this->adminIndex($data);
 			}
 		}
 
