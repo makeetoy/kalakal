@@ -11,13 +11,18 @@ class Login_model extends CI_Model
       return false;
     }
   }
-  
-  function customername($username,$password){
+  function updatecustomer($username,$password,$id){
+    $this->db->set("custLogin",$id);
+    $this->db->where('custUsername',$username);
+    $this->db->where('custPassword',$password);
+    $this->db->update("customer_tbl");
+  }
+
+  function customerdata($id){
     //$query = $this->db->query("SELECT custName FROM customer_tbl WHERE custUsername='$username' AND custPassword='$password');
-    $this->db->select("custName");
+    $this->db->select("*");
 		$this->db->from("customer_tbl");
-    $this->db->where("custUsername",$username);
-    $this->db->where("custPassword",$password);
+    $this->db->where("custLogin",$id);
 		$query=$this->db->get();
     return $query;
   }
@@ -32,12 +37,17 @@ class Login_model extends CI_Model
       return false;
     }
   }
-  function vendorname($username,$password){
+  function updatevendor($username,$password,$id){
+    $this->db->set("vendLogin",$id);
+    $this->db->where('vendUsername',$username);
+    $this->db->where('vendPassword',$password);
+    $this->db->update("vendor_tbl");
+  }
+  function vendordata($id){
     //$query = $this->db->query("SELECT custName FROM customer_tbl WHERE custUsername='$username' AND custPassword='$password');
-    $this->db->select("vendName");
+    $this->db->select("*");
 		$this->db->from("vendor_tbl");
-    $this->db->where("vendUsername",$username);
-    $this->db->where("vendPassword",$password);
+    $this->db->where("vendLogin",$id);
 		$query=$this->db->get();
     return $query;
   }

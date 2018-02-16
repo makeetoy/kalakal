@@ -1,140 +1,150 @@
-    <title>Kalakal | A B2B Wholesale E-Commerce Platform</title>
-  </head>
+  <title>Kalakal | A B2B Wholesale E-Commerce Platform</title>
 
-  <body>
-    <div class="navbar-fixed">
-      <nav class="white navbar-fixed main-navigation" role="navigation">
-        <div class="nav-wrapper container">
-          <a id="logo-container" href="<?php echo base_url()?>" class="brand-logo ">Kalakal.ph</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="<?php echo base_url()?>login">Login</a></li>
-            <li><a href="<?php echo base_url()?>register">Register</a></li>
-            <li><a class="nav-link js-scroll-trigger" href="#features">Features</a></li>
-            <li><a class="nav-link js-scroll-trigger" href="#newsletter">Newsletter</a></li>
-            <li><a class="orange waves-effect waves-light btn" href="<?php echo base_url()?>store">Visit Store</a></li>
-          </ul>
+  <!-- Custom fonts for this template -->
+  <link href="<?php echo base_url('assets/css/font-awesome.min.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/simple-line-icons.css'); ?>" rel="stylesheet">
 
-          <!-- Navbar converts to side menu when mobile mode -->
-          <ul id="nav-mobile" class="side-nav">
-            <li><a href="<?php echo base_url()?>login">Login</a></li>
-            <li><a href="<?php echo base_url()?>register">Register</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#newsletter">Newsletter</a></li>
-            <li><a class="orange waves-effect waves-light btn" href="#">Visit Store</a></li>
-          </ul>
-          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
-      </nav>
-    </div>
+  <!-- Plugin CSS -->
+  <link href="<?php echo base_url('assets/css/magnific-popup.css'); ?>" rel="stylesheet">
+</head>
 
+<body id="page-top">
 
-  <div id="index-banner" class="parallax-container" style="padding: 100px">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center orange-text text-lighten-2">Jumpstart your Business</h1>
-        <div class="row center">
-          <h5 class="header col s12 light"> Kalakal is a B2B wholesale e-commerce
-            platform for entrepreneurs looking for goods at the best price</h5>
-        </div>
-        <div class="row center">
-          <div class="input-field col s8">
-            <input type="text" class="validate">
-            <label for="first_name">Email Address</label>
-          </div>
-          <div class="col s4">
-            <a href="#" id="submit-button" class="btn-large waves-effect waves-light orange lighten-1">Get Started</a>
-          </div>
-        </div>
-        <br><br>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Kalakal.ph</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="<?php echo base_url()?>login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="<?php echo base_url()?>register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#newsletter">Newsletter</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary" href="<?php echo base_url()?>store">Visit Store</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="parallax"><img src="<?php echo base_url('assets/img/header.png')?>" alt="Unsplashed background img 1"></div>
-  </div>
+  </nav>
 
-  <!-- Feature Section -->
-  <div id="features" class="blue-grey parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h3 class="header s12 light">Everything you need to grow your business</h3>
-          <p>Kalakal helps small and medium enterprises to manage their business
-            <br> by making most of the process online and digital. A simple solution
-            that will help your brand sell more</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Icon Section -->
-  <div class="container">
-    <div class="section">
+  <!-- Masthead -->
+  <header class="masthead text-center text-white d-flex">
+    <div class="container my-auto">
       <div class="row">
-
-        <div class="col s4" style="padding: auto;">
-          <div class="icon-block">
-            <div>
-              <img class="responsive-img" style= "padding: 50px 60px 0px 60px;"
-                  src="<?php echo base_url('assets/img/store-icon.png');?>"
-                  alt="error">
+        <div class="col-lg-10 mx-auto">
+          <h1 class="text-uppercase">
+            <strong>Jumpstart your Business</strong>
+          </h1>
+          <hr>
+        </div>
+        <div class="col-lg-8 mx-auto">
+          <p class="text-faded mb-5">Kalakal is a B2B wholesale e-commerce
+            platform for entrepreneurs looking for goods at the best price</p>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form>
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+              </div>
+              <div class="col-12 col-md-3">
+                <button type="submit" class="btn btn-lg btn-primary">Get Started</button>
+              </div>
             </div>
-            <h5 class="center">Setup your own store</h5>
-            <p class="light">We help business owners to scale their business by being
-                            the podium for their products and services online</p>
-          </div>
-        </div>
-
-        <div class="col s4" style="padding: auto;">
-           <div class="icon-block">
-             <div>
-               <img class="responsive-img" style="padding: 50px 60px 0px 60px;"
-                    src="<?php echo base_url('assets/img/delivery-icon.png');?>"
-                    alt="error">
-             </div>
-             <h5 class="center">Track package deliveries</h5>
-             <p class="light">Keep updated with your packages thru the tracking f
-                              eature of the system</p>
-           </div>
-         </div>
-
-         <div class="col s4" style="padding: auto;">
-           <div class="icon-block">
-             <div>
-               <img class="responsive-img" style="padding: 50px 60px 0px 60px;"
-                    src="<?php echo base_url('assets/img/reports-icon.png');?>"
-                    alt="error">
-              </div>
-              <h5 class="center">Generate sales reports</h5>
-              <p class="light"> View your sales automatically by the reports
-                                 generated by the system </p>
-           </div>
-         </div>
-      </div>
-    </div>
-  </div>
-
-<!-- Newsletter Section -->
-  <div id=newsletter class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-
-            <h5 class="header col s12 light">Interested? We'd love to connect!</h5>
-            <form method="post" action="<?php echo base_url();?>Newsletter_controller/submit">
-              <div class="row">
-              <div class="input-field col s12">
-                <input type="text" class="validate" name="name" id="name" required>
-                <label for="name">Name</label>
-              </div>
-              <div class="input-field col s12">
-                <input type="text" class="validate" name="email" id="email" required>
-                <label for="email_address">Email Address</label>
-              </div>
-              <input type="submit" class="btn"  name="submit" value="SUBMIT">
-              </div>
-            </form>
-          </div>
+          </form>
         </div>
       </div>
-      <div class="parallax"><img src="<?php echo base_url('assets/img/header.png');?>" alt="error"></div>
     </div>
+  </header>
+
+  <!-- Features -->
+  <section class="bg-primary" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="section-heading text-white">Everything you need to grow your business</h2>
+          <hr class="light my-4">
+          <p class="text-faded mb-4">Kalakal helps small and medium enterprises to manage their business
+            <br> by making most of the process online and digital. A simple solution
+            that will help your brand sell more<</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">At Your Service</h2>
+          <hr class="my-4">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-shopping-bag text-primary mb-3"></i>
+            <h3 class="mb-3">Setup your own virtual store</h3>
+            <p class="text-muted mb-0">We help business owners to scale their business by being
+                            the podium for their products and services online.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-truck text-primary mb-3"></i>
+            <h3 class="mb-3">Track package deliveries</h3>
+            <p class="text-muted mb-0">Keep updated with your packages thru the tracking
+                            feature of the system</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-chart-line text-primary mb-3"></i>
+            <h3 class="mb-3">Generate sales reports</h3>
+            <p class="text-muted mb-0">View your sales automatically by the reports
+                            generated by the system.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-heart text-primary mb-3"></i>
+            <h3 class="mb-3">Scale your Business</h3>
+            <p class="text-muted mb-0">With Kalakal, Users can now improve their
+                            services in the international level</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="bg-primary text-white">
+    <div class="container">
+      <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+        <h2 class="mb-4">Get updates thru our daily newsletter!</h2>
+        <form>
+          <div class="form-row">
+            <div class="col-12 col-md-9 mb-2 mb-md-0">
+              <input id="email" name="email" type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+            </div>
+            <div class="col-12 col-md-3">
+              <button type="submit" value="SUBMIT" class="btn btn-block btn-lg btn-secondary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+  </section>
