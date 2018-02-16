@@ -23,7 +23,11 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo base_url();?>Custdash_controller/user">
                             <i class="nc-icon nc-circle-09"></i>
-                            <p>User Profile</p>
+                            <?php
+                            foreach($name->result() as $row){
+                              echo '<p>'.$row->custName.'</p>';
+                            }
+                            ?>
                         </a>
                     </li>
                     <li>
@@ -118,7 +122,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo base_url();?>IsLogin_controller/logoutcustomer">
+                                <a class="nav-link" href="<?php echo base_url();?>Login_controller/logoutcustomer">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>

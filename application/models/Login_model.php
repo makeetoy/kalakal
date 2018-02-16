@@ -22,7 +22,7 @@ class Login_model extends CI_Model
     //$query = $this->db->query("SELECT custName FROM customer_tbl WHERE custUsername='$username' AND custPassword='$password');
     $this->db->select("*");
 		$this->db->from("customer_tbl");
-    $this->db->where("custLogin",$id);
+    $this->db->where("custUsername",$id);
 		$query=$this->db->get();
     return $query;
   }
@@ -47,7 +47,7 @@ class Login_model extends CI_Model
     //$query = $this->db->query("SELECT custName FROM customer_tbl WHERE custUsername='$username' AND custPassword='$password');
     $this->db->select("*");
 		$this->db->from("vendor_tbl");
-    $this->db->where("vendLogin",$id);
+    $this->db->where("vendUsername",$id);
 		$query=$this->db->get();
     return $query;
   }
@@ -61,14 +61,20 @@ class Login_model extends CI_Model
       return false;
     }
   }
-  function manufacturername($username,$password){
+  function updatemanufacturer($username,$password,$id){
+    $this->db->set("manuLogin",$id);
+    $this->db->where('manuUsername',$username);
+    $this->db->where('manuPassword',$password);
+    $this->db->update("manufacturer_tbl");
+  }
+  function manufacturerdata($id){
     //$query = $this->db->query("SELECT custName FROM customer_tbl WHERE custUsername='$username' AND custPassword='$password');
-    $this->db->select("manuName");
+    $this->db->select("*");
 		$this->db->from("manufacturer_tbl");
-    $this->db->where("manuUsername",$username);
-    $this->db->where("manuPassword",$password);
+    $this->db->where("manuUsername",$id);
 		$query=$this->db->get();
     return $query;
   }
+
 }
 ?>

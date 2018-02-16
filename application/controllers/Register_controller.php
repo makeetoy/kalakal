@@ -37,7 +37,7 @@ class Register_controller extends CI_Controller {
         echo "Vendor Success!";
     }
 
-    else if($this->input->post('create_Manufacturer')=="Register as Manufacturer"){
+    else if($this->input->post('create_manufacturer')=="Register as Manufacturer"){
         $data = array(
             "manuName" => $this->input->post("name"),
             "manuAddress" => $this->input->post("address"),
