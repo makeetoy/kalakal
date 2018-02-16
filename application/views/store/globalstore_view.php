@@ -1,112 +1,201 @@
-<title>Kalakal | Store</title>
-<link href="<?php echo base_url('assets/css/style.css'); ?>" type="text/css" rel="stylesheet" media="screen,projection"/>
+<title>Kalakal | Store </title>
+
 </head>
+
 <body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="<?php echo base_url()?>">Kalakal | Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+      </button>
 
-<!--first navigation -->
-<nav class="orange" role="navigation">
-  <div class="nav-wrapper container">
-		<a class="center col s3 brand-logo" id="logo-container" href="<?php echo base_url()?>">Kalakal.ph</a>
-		<a data-activates="slide-out" class="button-collapse show-on- " href="#!">
-			<ul class="right hide-on-med-and-down ">	
-				 <li><a href="<?php echo base_url()?>login">Login</a></li>
-				 <li><a href="<?php echo base_url()?>register">Register</a></li>
-			</ul>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="category.html">Categories <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Product</a>
+          </li>
+        </ul>
 
-<!-- Navbar converts to side menu when mobile mode -->
-          <ul id="nav-mobile" class="side-nav">
-            <li><a href="<?php echo base_url()?>login">Login</a></li>
-            <li><a href="<?php echo base_url()?>register">Register</a></li>
-			<li><a href="<?php echo base_url()?>">View Cart</a></li>
-          </ul>
-          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="black-text material-icons">menu</i></a>
+        <form class="form-inline my-2 my-lg-0">
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+
+            <div class="input-group-append">
+              <button type="button" class="btn btn-secondary btn-number">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-sm ml-3" href="cart.html">
+            <i class="fa fa-shopping-cart"></i> Cart
+            <span class="badge badge-light">3</span>
+          </a>
+        </form>
+      </div>
     </div>
-</nav>
+  </nav>
 
+  <div class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="category.html">Category</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Sub-category</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-3">
+            <div class="card bg-light mb-3">
+                <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categories</div>
+                <ul class="list-group category_block">
+                    <li class="list-group-item"><a href="category.html">Cras justo odio</a></li>
+                    <li class="list-group-item"><a href="category.html">Dapibus ac facilisis in</a></li>
+                    <li class="list-group-item"><a href="category.html">Morbi leo risus</a></li>
+                    <li class="list-group-item"><a href="category.html">Porta ac consectetur ac</a></li>
+                    <li class="list-group-item"><a href="category.html">Vestibulum at eros</a></li>
+                </ul>
+            </div>
 
-<!-- second navigation-->
-<nav class="orange  lighten-3" role="navigation">
-<ul class="left"><a class=" hide-on-med-and-down dropdown-button black-text waves-effect orange waves-light btn" href='' data-activates="user_dropdown " >Categories</a></ul>	 
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://dummyimage.com/600x400/55595c/fff" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title"><a href="product.html" title="View Product">Product title</a></h4>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="btn btn-danger btn-block">99.00 $</p>
+                                </div>
+                                <div class="col">
+                                    <a href="#" class="btn btn-primary btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
 
-<!-- Dropdown -->
-  <ul class="dropdown-content" id="user_dropdown">
-    <li><a class="orange-text" href="#!">Category 1</a></li>
-    <li><a class="orange-text" href="#!">Category 2</a></li>
-    <li><a class="orange-text" href="#!">Category 3</a></li>
-	<li><a class="orange-text" href="#!">Category 4</a></li>
-    <li><a class="orange-text" href="#!">Category 5</a></li>
-    <li><a class="orange-text" href="#!">Category 6</a></li>
-  </ul>
-  <ul class="right"><a href="<?php echo base_url()?>"  class="hide-on-med-and-down waves-effect orange waves-light btn black-text">View Cart</a></ul>	
-	
-  <div class="nav-wrapper container">
-		<div class="center col s4 orange lighten-5 nav-wrapper container" >
-				<form>
-					<div class="input-field">
-						<input id="search" type="search">
-					</div>
-				</form>  
-		</div>				
-   </div>
-</nav>
-<br>
-	
-<!--Featured-->
-<div class="container "> 
-<h5>FEATURED</h5>  
-			<ul><div class="center col-sm-2">
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:130px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:130px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:130px" alt="Image"></a> 
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:130px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:130px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:130px" alt="Image"></a> 
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:130px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:130px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:130px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:130px" alt="Image"></a>
-				
-				</div>
-			
-				
-</ul></div><br>
-
-<!--Top Vendors-->
-<div class="center container "> 
-<h5>TOP VENDORS</h5>  
-			<ul><div class="col-sm-2">
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:120px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:120px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:120px" alt="Image"></a> 
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:120px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:120px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:100px;width:120px" alt="Image"></a>
-			</div>
-</ul></div><br>
-
-<!--Categories-->
-
-
-<ul><div class="center col-sm-2">
-			<h5>CATEGORIES</h5> 
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a> 
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a> 
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a>
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a> 
-				<a href="#"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="height:120px;width:180px" alt="Image"></a>
-				</div>
-</ul>
-
-
-</body>
-</html>
-
+    </div>
+</div>
