@@ -40,5 +40,22 @@
     <!-- Custom scripts for this template -->
     <script src="<?php echo base_url('assets/js/creative.min.js');?>"></script>
 
+    <!--<script src="<?php echo base_url('assets/js/jquery.3.2.1.min.js'); ?>" type="text/javascript"></script>-->
+    <script src="<?php echo base_url('assets/js/popper.min.js'); ?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('assets/js/bootstrap-switch.js'); ?>"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <script src="<?php echo base_url('assets/js/chartist.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/bootstrap-notify.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/light-bootstrap-dashboard.js'); ?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('assets/js/demo.js'); ?>"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          demo.initDashboardPageCharts();
+
+
+        });
+    </script>
+
   </body>
 </html>
