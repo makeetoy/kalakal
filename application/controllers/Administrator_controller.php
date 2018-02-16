@@ -15,25 +15,30 @@ class Administrator_controller extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function login(){
+	public function adminIndex($data){
+		$this->load->view('template/header');
+		$this->load->view('administrator/admin_view', $data);
+		$this->load->view('template/footer');
+	}
+
+	public function dashboard(){
 		$this->load->view('template/header');
 		$this->load->view('administrator/adminDash_view');
 		$this->load->view('template/footer');
 	}
 
-    public function loginValidation(){
-      if($this->input->post('login_admin')=="Login"){
-        $this->load->model('Administrator_model');
-        $username = $this->input->post('username');
-        $password = $this->input->post('password');
-        if($this->Administrator_model->adminlogin($username,$password)){
-          echo "Admin";
-        }else{
-          echo "error";
-        }
-      }
-    }
+	public function login(){
+			$this->load->model('Administrator_model');
+			$email = $this->input->post('email');
+			$password = $this->input->post('password');
+			if($this->Administrator_model->adminLogin($email,$password)){
+				redirect('/admindash');
+			}else{
+				$data['status'] = false;
+				$this->adminIndex($data);
+			}
+		}
+
+
 }
 ?>
-
-
