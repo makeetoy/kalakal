@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2018 at 11:21 AM
--- Server version: 10.1.29-MariaDB
--- PHP Version: 7.2.0
+-- Generation Time: Jan 26, 2018 at 03:50 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `kalakal_db`
+-- Database: `kalaka_db`
 --
 
 -- --------------------------------------------------------
@@ -35,16 +35,8 @@ CREATE TABLE `customer_tbl` (
   `custContact` varchar(11) NOT NULL,
   `custEmail` varchar(11) NOT NULL,
   `custUsername` varchar(11) NOT NULL,
-  `custPassword` varchar(50) NOT NULL,
-  `custLogin` tinyint(1) NOT NULL
+  `custPassword` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `customer_tbl`
---
-
-INSERT INTO `customer_tbl` (`customerID`, `custName`, `custAddress`, `custContact`, `custEmail`, `custUsername`, `custPassword`, `custLogin`) VALUES
-(7, '123', '123', '123', '123@asdasd', '123123', '601f1889667efaebb33b8c12572835da3f027f78', 0);
 
 -- --------------------------------------------------------
 
@@ -86,16 +78,8 @@ CREATE TABLE `manufacturer_tbl` (
   `manuContact` varchar(11) NOT NULL,
   `manuEmail` varchar(11) NOT NULL,
   `manuUsername` varchar(11) NOT NULL,
-  `manuPassword` varchar(50) NOT NULL,
-  `manuLogin` tinyint(1) NOT NULL
+  `manuPassword` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `manufacturer_tbl`
---
-
-INSERT INTO `manufacturer_tbl` (`manufacturerID`, `manuName`, `manuAddress`, `manuContact`, `manuEmail`, `manuUsername`, `manuPassword`, `manuLogin`) VALUES
-(1, 'asdasasd', 'asd', '12345678901', 'asdas@gagas', 'asd', 'asd', 0);
 
 -- --------------------------------------------------------
 
@@ -108,16 +92,6 @@ CREATE TABLE `newsletter_tbl` (
   `name` varchar(11) NOT NULL,
   `email` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `newsletter_tbl`
---
-
-INSERT INTO `newsletter_tbl` (`newsletterID`, `name`, `email`) VALUES
-(1, 'asdasd', 'asdasd@asda'),
-(2, 'asdasd', 'asdasd@asda'),
-(3, 'asdas', 'asdasd@asda'),
-(4, 'asdasdasdas', 'asdasd@asda');
 
 -- --------------------------------------------------------
 
@@ -137,6 +111,19 @@ CREATE TABLE `product_tbl` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `prod_manu_tbl`
+--
+
+CREATE TABLE `prod_manu_tbl` (
+  `prodManuID` int(11) NOT NULL,
+  `prodManuPrice` int(11) NOT NULL,
+  `prodManuQty` int(11) NOT NULL,
+  `productID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `prod_vendor_tbl`
 --
 
@@ -144,7 +131,8 @@ CREATE TABLE `prod_vendor_tbl` (
   `prodVendorID` int(11) NOT NULL,
   `prodVendPrice` int(11) NOT NULL,
   `prodVendQty` int(11) NOT NULL,
-  `vendorID` int(11) NOT NULL
+  `vendorID` int(11) NOT NULL,
+  `productID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -160,18 +148,35 @@ CREATE TABLE `vendor_tbl` (
   `vendContact` varchar(11) NOT NULL,
   `vendEmail` varchar(11) NOT NULL,
   `vendUsername` varchar(11) NOT NULL,
-  `vendPassword` varchar(50) NOT NULL,
-  `vendLogin` tinyint(1) NOT NULL
+  `vendPassword` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `vendor_tbl`
+-- Table structure for table `vend_orderlist_tbl`
 --
 
-INSERT INTO `vendor_tbl` (`vendorID`, `vendName`, `vendAddress`, `vendContact`, `vendEmail`, `vendUsername`, `vendPassword`, `vendLogin`) VALUES
-(1, 'asdasd', '123123', '123132123', '123123@asd', 'asd', '123', 0),
-(2, 'asdasasas', 'asd', 'asd2', 'asd@asd123.', 'asd2', 'asd2', 0),
-(3, 'asd', 'asd', '09123123', 'asd@asd', 'asd', 'f10e2821bbbea527ea02200352313bc059445190', 0);
+CREATE TABLE `vend_orderlist_tbl` (
+  `vendOrdListID` int(11) NOT NULL,
+  `vendOrderID` int(11) NOT NULL,
+  `vendProductID` int(11) NOT NULL,
+  `vendOrderListQty` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vend_order_tbl`
+--
+
+CREATE TABLE `vend_order_tbl` (
+  `vendOrderID` int(11) NOT NULL,
+  `vendOrderDate` varchar(11) NOT NULL,
+  `vendOrderInvoice` varchar(11) NOT NULL,
+  `vendOrderNotes` varchar(255) NOT NULL,
+  `vendOrderPayStat` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -226,6 +231,12 @@ ALTER TABLE `vendor_tbl`
   ADD PRIMARY KEY (`vendorID`);
 
 --
+-- Indexes for table `vend_orderlist_tbl`
+--
+ALTER TABLE `vend_orderlist_tbl`
+  ADD PRIMARY KEY (`vendOrdListID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -233,7 +244,7 @@ ALTER TABLE `vendor_tbl`
 -- AUTO_INCREMENT for table `customer_tbl`
 --
 ALTER TABLE `customer_tbl`
-  MODIFY `customerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `customerID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `cust_orderlist_tbl`
@@ -251,13 +262,13 @@ ALTER TABLE `cust_order_tbl`
 -- AUTO_INCREMENT for table `manufacturer_tbl`
 --
 ALTER TABLE `manufacturer_tbl`
-  MODIFY `manufacturerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `manufacturerID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `newsletter_tbl`
 --
 ALTER TABLE `newsletter_tbl`
-  MODIFY `newsletterID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `newsletterID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `product_tbl`
@@ -275,7 +286,13 @@ ALTER TABLE `prod_vendor_tbl`
 -- AUTO_INCREMENT for table `vendor_tbl`
 --
 ALTER TABLE `vendor_tbl`
-  MODIFY `vendorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `vendorID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `vend_orderlist_tbl`
+--
+ALTER TABLE `vend_orderlist_tbl`
+  MODIFY `vendOrdListID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
