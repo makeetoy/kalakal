@@ -22,15 +22,17 @@ class Login_controller extends CI_Controller {
           $this->load->model('login_model');
           $username = $this->input->post('username');
           $password = sha1($this->input->post('password'));
-          $custLogin = true;
+          $custLogin=true;
           if($this->login_model->customerlogin($username,$password)){
-            $session_data = array(
+              $session_data = array(
                'username' => $username,
                'custLogin' => $custLogin
-            );
-            $this->session->set_userdata($session_data);
-            redirect(base_url());
-          }else{
+             );
+             $this->session->set_userdata($session_data);
+             redirect(base_url());
+          }
+
+          else{
             $this->session->set_flashdata('error', 'Invalid Username and Password');
             redirect(base_url().'login');
           }
@@ -89,6 +91,16 @@ class Login_controller extends CI_Controller {
     public function logoutmanufacturer(){
       $this->session->unset_userdata('manuLogin');
       redirect(base_url());
+    }
+    public function checkemail(){
+      $this->load->model('login_model');
+      $email=$this->input->post('email');
+      if($this->login_model->checkemail($email)){
+        redirect(base_url().'login');
+      }
+      else{
+        redirect(base_url().'register');
+      }
     }
   }
 ?>

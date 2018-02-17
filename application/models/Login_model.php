@@ -1,79 +1,74 @@
 <?php
 class Login_model extends CI_Model
 {
-  function customerlogin($username,$password){
-    $this->db->where('custUsername',$username);
-    $this->db->where('custPassword',$password);
-    $query = $this->db->get('customer_tbl');
+  function customerlogin($username,$password){;
+    $query = $this->db->get(" `customer_tbl` WHERE custUsername='$username' OR custEmail='$username' AND custPassword='$password'");
     if($query->num_rows() > 0){
       return true;
     }else{
       return false;
     }
-  }
-  function updatecustomer($username,$password,$id){
-    $this->db->set("custLogin",$id);
-    $this->db->where('custUsername',$username);
-    $this->db->where('custPassword',$password);
-    $this->db->update("customer_tbl");
   }
 
   function customerdata($id){
-    //$query = $this->db->query("SELECT custName FROM customer_tbl WHERE custUsername='$username' AND custPassword='$password');
-    $this->db->select("*");
-		$this->db->from("customer_tbl");
-    $this->db->where("custUsername",$id);
-		$query=$this->db->get();
+		$query=$this->db->get(" `customer_tbl` WHERE custUsername='$id' OR custEmail='$id'");
     return $query;
   }
 
-  function vendorlogin($username,$password){
-    $this->db->where('vendUsername',$username);
-    $this->db->where('vendPassword',$password);
-    $query = $this->db->get('vendor_tbl');
+  function vendorlogin($username,$password){;
+    $query = $this->db->get(" `vendor_tbl` WHERE vendUsername='$username' OR vendEmail='$username' AND vendPassword='$password'");
     if($query->num_rows() > 0){
       return true;
     }else{
       return false;
     }
   }
-  function updatevendor($username,$password,$id){
-    $this->db->set("vendLogin",$id);
-    $this->db->where('vendUsername',$username);
-    $this->db->where('vendPassword',$password);
-    $this->db->update("vendor_tbl");
-  }
+
   function vendordata($id){
-    //$query = $this->db->query("SELECT custName FROM customer_tbl WHERE custUsername='$username' AND custPassword='$password');
-    $this->db->select("*");
-		$this->db->from("vendor_tbl");
-    $this->db->where("vendUsername",$id);
-		$query=$this->db->get();
+		$query=$this->db->get(" `vendor_tbl` WHERE vendUsername='$id' OR vendEmail='$id'");
     return $query;
   }
-  function manufacturerlogin($username,$password){
-    $this->db->where('manuUsername',$username);
-    $this->db->where('manuPassword',$password);
-    $query = $this->db->get('manufacturer_tbl');
+
+  function manufacturerlogin($username,$password){;
+    $query = $this->db->get(" `manufacturer_tbl` WHERE manuUsername='$username' OR manuEmail='$username' AND manuPassword='$password'");
     if($query->num_rows() > 0){
       return true;
     }else{
       return false;
     }
   }
-  function updatemanufacturer($username,$password,$id){
-    $this->db->set("manuLogin",$id);
-    $this->db->where('manuUsername',$username);
-    $this->db->where('manuPassword',$password);
-    $this->db->update("manufacturer_tbl");
-  }
+
   function manufacturerdata($id){
-    //$query = $this->db->query("SELECT custName FROM customer_tbl WHERE custUsername='$username' AND custPassword='$password');
-    $this->db->select("*");
-		$this->db->from("manufacturer_tbl");
-    $this->db->where("manuUsername",$id);
-		$query=$this->db->get();
+		$query=$this->db->get(" `manufacturer_tbl` WHERE manuUsername='$id' OR manuEmail='$id'");
     return $query;
+  }
+
+  function checkemail($email){
+    $this->db->select('custEmail');
+    $this->db->from('customer_tbl');
+    $this->db->where('custEmail',$email);
+    $query1 = $this->db->get();
+      $this->db->select('vendEmail');
+      $this->db->from('vendor_tbl');
+    $this->db->where('vendEmail',$email);
+    $query2 = $this->db->get();
+      $this->db->select('manuEmail');
+      $this->db->from('manufacturer_tbl');
+    $this->db->where('manuEmail',$email);
+    $query3 = $this->db->get();
+    if($query1->num_rows() > 0){
+       return true;
+    }
+    else if($query2->num_rows() >0){
+      return true;
+    }
+    else if($query3->num_rows() >0){
+      return true;
+    }
+    else{
+      return false;
+    }
+
   }
 
 }
