@@ -14,21 +14,24 @@ class Homepage_controller extends CI_Controller {
 			if($customer){
 				$this->load->model('login_model');
 				$data['name']=$this->login_model->customerdata($this->session->userdata('username'));
-				$this->load->view('template/custheader');
+				$this->load->view('template/header');
+				$this->load->view('template/dashboard-css');
 				$this->load->view('accounts/customer/dashboard',$data);
 				$this->load->view('template/footer');
 			}
 			else if($vendor){
 				$this->load->model('login_model');
 				$data['name']=$this->login_model->vendordata($this->session->userdata('username'));
-				$this->load->view('template/custheader');
+				$this->load->view('template/header');
+				$this->load->view('template/dashboard-css');
 				$this->load->view('accounts/vendor/dashboard',$data);
 				$this->load->view('template/footer');
 			}
 			else if($manufacturer){
 				$this->load->model('login_model');
 				$data['name']=$this->login_model->manufacturerdata($this->session->userdata('username'));
-				$this->load->view('template/custheader');
+				$this->load->view('template/header');
+				$this->load->view('template/dashboard-css');
 				$this->load->view('accounts/manufacturer/dashboard',$data);
 				$this->load->view('template/footer');
 			}
