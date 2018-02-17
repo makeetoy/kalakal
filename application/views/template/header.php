@@ -20,3 +20,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <!-- Custom styles for this template -->
   <link href="<?php echo base_url('assets/css/creative.min.css'); ?>" rel="stylesheet">
+
+
+  <link href="<?php echo base_url('assets/css/sweetalert.css'); ?>" rel="stylesheet" />

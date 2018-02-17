@@ -20,16 +20,26 @@ class Register_controller extends CI_Controller {
             "custUsername" => $this->input->post("username"),
             "custPassword" => sha1($this->input->post("password"))
         );
+        $erorr=false;
         $this->load->model('register_model');
         if($this->register_model->custcheckname($data["custName"])){
             $this->session->set_flashdata('nameerror', 'Name Already Exist');
-            if($this->register_model->custcheckusername($data["custUsername"])){
-              $this->session->set_flashdata('usernameerror', 'Username Already Exist');
-              if($this->register_model->custcheckemail($data["custEmail"])){
-                $this->session->set_flashdata('emailerror', 'Email Already Exist');
-                redirect(base_url().'register');
-              }
-            }
+            $error=true;
+        }
+        if($this->register_model->custcheckusername($data["custUsername"])){
+          $this->session->set_flashdata('usernameerror', 'Username Already Exist');
+          $error=true;
+        }
+        if($this->register_model->custcheckemail($data["custEmail"])){
+          $this->session->set_flashdata('emailerror', 'Email Already Exist');
+          $error=true;
+        }
+        if($this->input->post("password")!=$this->input->post("confirm_password")){
+          $this->session->set_flashdata('passerror', 'Passwords Does not match');
+          $error=true;
+        }
+        if($error){
+          redirect(base_url().'register');
         }
         else{
         $this->load->model('register_model');

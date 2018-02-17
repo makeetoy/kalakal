@@ -1,10 +1,10 @@
   <title>Kalakal | Register </title>
 
   <!-- Custom fonts for this template -->
-  <link href="<?php echo base_url('assets/css/login.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/login.css'); ?>" rel="stylesheet" />
 
   <!-- Plugin CSS -->
-  <link href="<?php echo base_url('assets/css/magnific-popup.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/magnific-popup.css'); ?>" rel="stylesheet" />
 </head>
 
 <body class="text-center">
@@ -87,6 +87,9 @@
         <label for="inputPassword" class="sr-only">Confirm Password</label>
         <input type="text" name="confirm_password" id="inputconfirmPassword" class="form-control"
                placeholder="Confirm Password" required>
+               <?php
+                 echo "<p class='text-danger'>".$this->session->flashdata("passerror")."<p>";
+                ?>
       </div>
 
       <label class="mt-2" for="selectUser">Register as:</label>
@@ -98,21 +101,3 @@
 
       <input class="btn btn-lg btn-primary btn-block" type="submit" value="Register">
     </form>
-    <script type="text/javascript">
-    var password = document.getElementById("inputPassword")
-    var confirm_password = document.getElementById("inputconfirmPassword");
-
-function validatePassword(){
-if(password.value != confirm_password.value) {
-  confirm_password.setCustomValidity("Passwords Don't Match");
-
-} else {
-  confirm_password.setCustomValidity('Matched');
-  window.location.assign("<?php echo base_url();?>Register_controller/registerValidation");
-
-}
-}
-
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
-    </script>
