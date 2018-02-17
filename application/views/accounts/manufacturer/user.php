@@ -122,7 +122,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo base_url();?>Login_controller/logoutmanufacturer">
+                                <a class="nav-link" onclick="loutmanu()" href="#">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>

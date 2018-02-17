@@ -124,7 +124,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo base_url();?>Login_controller/logoutvendor">
+                                <a class="nav-link" onclick="loutvend()" href="#">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>
