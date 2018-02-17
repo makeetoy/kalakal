@@ -21,9 +21,23 @@ class Register_controller extends CI_Controller {
             "custPassword" => sha1($this->input->post("password"))
         );
         $this->load->model('register_model');
+        if($this->register_model->custcheckname($data["custName"])){
+            $this->session->set_flashdata('nameerror', 'Name Already Exist');
+            if($this->register_model->custcheckusername($data["custUsername"])){
+              $this->session->set_flashdata('usernameerror', 'Username Already Exist');
+              if($this->register_model->custcheckemail($data["custEmail"])){
+                $this->session->set_flashdata('emailerror', 'Email Already Exist');
+                redirect(base_url().'register');
+              }
+            }
+        }
+        else{
+        $this->load->model('register_model');
         $this->register_model->registercustomer($data);
         echo "Customer Success!";
+        }
         break;
+
 
       case 'vendor':
         $data = array(

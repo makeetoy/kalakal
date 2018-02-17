@@ -49,34 +49,60 @@
       <h1 class="h3 mb-3 font-weight-normal">Kalakal Register Account</h1>
 
       <!--  Name Textfield -->
-      <label for="inputName" class="sr-only">Name</label>
-      <input type="name" name="name" id="inputName" class="form-control"
+      <div class="form-group">
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="name" name="name" id="inputName" class="form-control"
              placeholder="Name" required autofocus>
+             <?php
+               echo "<p class='text-danger'>".$this->session->flashdata("nameerror")."<p>";
+              ?>
+      </div>
 
       <!--  Address Textfield -->
-      <label for="inputAddress" class="sr-only">Address</label>
-      <input type="address" name="address" id="inputAddress" class="form-control"
+      <div class="form-group">
+        <label for="inputAddress" class="sr-only">Address</label>
+        <input type="address" name="address" id="inputAddress" class="form-control"
              placeholder="Address" required autofocus>
+      </div>
+      <!--  Email Textfield -->
+      <div class="form-group">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="email" id="inputEmail" class="form-control"
+               placeholder="Email address" required autofocus>
+               <?php
+                 echo "<p class='text-danger'>".$this->session->flashdata("emailerror")."<p>";
+                ?>
+      </div>
 
       <!--  Email Textfield -->
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" name="email" id="inputEmail" class="form-control"
-             placeholder="Email address" required autofocus>
-
-      <!--  Email Textfield -->
-      <label for="inputContactNumber" class="sr-only">Contact Number</label>
-      <input type="contact" name="contact" id="inputContactNumber"
-             class="form-control" placeholder="Contact Number" required autofocus>
+      <div class="form-group">
+        <label for="inputContactNumber" class="sr-only">Contact Number</label>
+        <input type="contact" name="contact" id="inputContactNumber"
+               class="form-control" placeholder="Contact Number" required autofocus>
+      </div>
 
       <!--  Username Textfield -->
-      <label for="inputUsername" class="sr-only">Username</label>
-      <input type="username" name="username" id="inputUsername" class="form-control"
-             placeholder="Username" required autofocus>
+      <div class="form-group">
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="username" name="username" id="inputUsername" class="form-control"
+               placeholder="Username" required autofocus>
+               <?php
+                 echo "<p class='text-danger'>".$this->session->flashdata("usernameerror")."<p>";
+                ?>
+      </div>
 
       <!--  Password Textfield -->
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="text" name="password" id="inputPassword" class="form-control"
-             placeholder="Password" required>
+      <div class="form-group">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="text" name="password" id="inputPassword" class="form-control"
+               placeholder="Password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword" class="sr-only">Confirm Password</label>
+        <input type="text" name="confirm_password" id="inputconfirmPassword" class="form-control"
+               placeholder="Confirm Password" required>
+      </div>
 
       <label class="mt-2" for="selectUser">Register as:</label>
       <select class="form-control mb-3" id="selectUser" name="usertype">
@@ -87,3 +113,21 @@
 
       <input class="btn btn-lg btn-primary btn-block" type="submit" value="Register">
     </form>
+    <script type="text/javascript">
+    var password = document.getElementById("inputPassword")
+    var confirm_password = document.getElementById("inputconfirmPassword");
+
+function validatePassword(){
+if(password.value != confirm_password.value) {
+  confirm_password.setCustomValidity("Passwords Don't Match");
+
+} else {
+  confirm_password.setCustomValidity('Matched');
+  window.location.assign("<?php echo base_url();?>Register_controller/registerValidation");
+
+}
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+    </script>

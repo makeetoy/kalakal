@@ -37,7 +37,7 @@
 
 
       <label for="inputUsername" class="sr-only">Username</label>
-      <input type="username" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+      <input type="username" name="username" id="inputUsername" class="form-control" placeholder="Username or Email" required autofocus>
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 

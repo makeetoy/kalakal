@@ -54,10 +54,10 @@
             platform for entrepreneurs looking for goods at the best price</p>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
+          <form method="post" action="<?php echo base_url();?>Login_controller/checkemail">
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+                <input type="email" class="form-control form-control-lg" name="email" placeholder="Enter your email..." required>
               </div>
               <div class="col-12 col-md-3">
                 <button type="submit" class="btn btn-lg btn-primary">Get Started</button>
