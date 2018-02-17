@@ -28,10 +28,17 @@ class Administrator_controller extends CI_Controller {
 	}
 
 	public function login(){
+<<<<<<< HEAD
 			$this->load->model('Administrator_model');
 			$email = $this->input->post('email');
 			$password = $this->input->post('password');
 			if($this->Administrator_model->adminLogin($email,$password)){
+=======
+			$this->load->model('Admin_model');
+			$email = $this->input->post('email');
+			$password = $this->input->post('password');
+			if($this->Admin_model->adminLogin($email,$password)){
+>>>>>>> master
 				redirect('/admindash');
 			}else{
 				$data['status'] = false;

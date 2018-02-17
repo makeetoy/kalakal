@@ -14,13 +14,7 @@ class Newsletter_controller extends CI_Controller {
 				"email" => $this->input->post("email"),
 		);
 		$this->newsletter_model->insert_newsletter($data);
-		redirect(base_url()."newsletter_controller/submitted");
+		redirect(base_url());
 	}
-
-  public function submitted(){
-		 $this->load->view('homepage/homepage_view');
-	}
-
-
 }
 ?>

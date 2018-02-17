@@ -6,5 +6,4 @@ class Newsletter_model extends CI_Model
 		$this->db->insert("newsletter_tbl", $data);
 	}
 }
-
- ?>
+?>

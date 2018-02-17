@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'Homepage_controller';
-$route['404_override'] = '';
+$route['404_override'] = 'Kalakal404_controller';
 $route['translate_uri_dashes'] = FALSE;
 $route['admin'] = 'Administrator_controller';
 $route['login'] = 'Login_controller';
@@ -59,3 +59,5 @@ $route['vendor'] = 'Vendor_controller';
 $route['manufacturer'] = 'Manufacturer_controller' ;
 $route['customer'] = 'Customer_controller';
 $route['store'] = 'Store_controller';
+$route['admindash'] = 'Administrator_controller/dashboard';
+$route['test'] = 'Test_controller';
